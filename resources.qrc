@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/images">
+    <file>GFX/goblin_wizard_banner_sm.png</file>
+    <file>GFX/midi_goblin_wizard_banner.png</file>
+  </qresource>
+</RCC>
