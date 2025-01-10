@@ -1,14 +1,17 @@
 import sys
 import os
-import ctypes
+# import ctypes
 import resources_rc
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QMessageBox, QFileDialog, QTableWidget, QApplication, QDialog, QApplication, QTableWidget
 from goblin_wizard_ui import Ui_Dialog  # Import the generated UI class
+import platform
 
-# Ensure DPI awareness for Windows systems
-ctypes.windll.shcore.SetProcessDpiAwareness(1)  # For DPI awareness
+if platform.system() == "Windows":
+    import ctypes
+    # Ensure DPI awareness for Windows systems
+    ctypes.windll.shcore.SetProcessDpiAwareness(1)  # For DPI awareness
 
 
 class MyWindow(QtWidgets.QDialog):
